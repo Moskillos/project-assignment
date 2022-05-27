@@ -23,7 +23,7 @@ export class HeroCardComponent implements OnInit {
   }
 
   onClick(){    
-    const phrase = Math.floor(Math.random()* this.phrases.length);
+    const phrase = Math.round(Math.random()* this.phrases.length);
     const emit = this.phrases[phrase]
     this.heroPhrases.emit(emit)
   }
