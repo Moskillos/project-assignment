@@ -17,9 +17,12 @@ export class AppComponent {
         'Intelletto',
         'Arti marziali',
         'Armi tecnologiche',
-    ]
+    ],
   }
-
-
   ]
+
+  getPhrases(event: any){
+    
+    alert(event)
+  }
 }

@@ -3,6 +3,6 @@
     <h2>Born to be Hero</h2>
   </div>  
   <div>
-    <app-hero-card [hero]="hero"></app-hero-card>
+    <app-hero-card [hero]="hero" (heroPhrases)="getPhrases($event)"></app-hero-card>
   </div>
 </div>
