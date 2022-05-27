@@ -7,7 +7,8 @@ import { Hero } from './model';
 })
 export class AppComponent {
   title = 'project-assignment';
-  hero:Hero[] = [{     
+  hero:Hero[] = [{ 
+    id: 1,    
     img: 'https://itakon.it/wp-content/uploads/2020/09/the-batman-ben-affleck-not-starring.jpg',
     name: 'Batman',
     ability: [

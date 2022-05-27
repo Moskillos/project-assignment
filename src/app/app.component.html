@@ -2,23 +2,7 @@
   <div class="title">
     <h2>Born to be Hero</h2>
   </div>  
-  <div class="hero-card">
-    <div>
-      <img [src]="hero[0].img" [alt]="hero[0].name" width="300px">
-    </div>    
-    <div class="hero-details">
-      <div>
-        <h3>{{ hero[0].name }}</h3>
-      </div>
-      <div>
-        <p style="text-decoration: underline">
-          <strong>Abilità</strong>        
-      </p>
-      </div>      
-      <div *ngFor="let h of hero[0].ability">
-        <li>{{ h }}</li>
-      </div>
-    </div>
-
+  <div>
+    <app-hero-card [hero]="hero"></app-hero-card>
   </div>
 </div>
