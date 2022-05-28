@@ -11,3 +11,12 @@
  .hero-details li{
      margin-left: 20px;
  }
+
+ .hero-title:hover h3{
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.hero-ability:hover li{
+    background-color: yellow;
+}

@@ -3,7 +3,7 @@
       <img [src]="hero[0].img" [alt]="hero[0].name" width="300px">
     </div>    
     <div class="hero-details">
-      <div>
+      <div class="hero-title">
         <h3>{{ hero[0].name }}</h3>
       </div>
       <div>
@@ -11,7 +11,7 @@
           <strong>Abilità</strong>        
       </p>
       </div>      
-      <div *ngFor="let h of hero[0].ability">
+      <div *ngFor="let h of hero[0].ability" class="hero-ability">
         <li>{{ h }}</li>
       </div>
     </div>
