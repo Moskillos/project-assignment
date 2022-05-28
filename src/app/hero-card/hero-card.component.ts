@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { HeroPhraseGeneratorService } from '../hero-phrase-generator.service';
 import { Hero } from '../model';
 
 @Component({
@@ -9,22 +10,16 @@ import { Hero } from '../model';
 export class HeroCardComponent implements OnInit {
   @Input() hero:Hero[] = [];
   @Output() heroPhrases= new EventEmitter<string>();
-  phrases: string[] = [
-    'Io sono vendetta',
-    'Andiamo a prenderli',
-    'Salverò Gotham',
-    'Ho imparato che non importa quale sia la storia, alcune cose non cambiano mai.',
-    'Dopo tutto, la fama è la nuova valuta internazionale.'
-  ]
+  
 
-  constructor() { }
+  constructor(private heroPhrasesGenerator: HeroPhraseGeneratorService) { }
 
   ngOnInit(): void {
   }
 
   onClick(){    
-    const phrase = Math.round(Math.random()* this.phrases.length);
-    const emit = this.phrases[phrase]
+    const phrase = Math.round(Math.random()* this.heroPhrasesGenerator.phrases.length);
+    const emit = this.heroPhrasesGenerator.phrases[phrase]
     this.heroPhrases.emit(emit)
   }
 
